@@ -47,7 +47,7 @@ def merge_sort(src, s, e, dst):
 
 
 if __name__ == "__main__":
-    sz = 5
+    sz = 10
     src = np.random.randint(0, 10000, sz, dtype=np.int64)
     buf = np.zeros(sz, dtype=np.int64)
     print(f"Before {src}")
