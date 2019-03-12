@@ -34,5 +34,5 @@ if __name__ == "__main__":
     prefix = []
     for cnf in place_queens(sz, prefix):
         c += 1
-        print(f"Config {c}: {cnf}")
+        print(f"Config {c:3d}: {cnf}")
     print(f"Total configs {c}")
