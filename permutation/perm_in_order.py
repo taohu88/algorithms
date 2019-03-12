@@ -1,7 +1,8 @@
 def swap(x, i, j):
-    t = x[i]
-    x[i] = x[j]
-    x[j] = t
+    # t = x[i]
+    # x[i] = x[j]
+    # x[j] = t
+    x[i], x[j] = x[j], x[i]
 
 
 def reverse(x, i):
