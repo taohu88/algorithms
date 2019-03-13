@@ -1,1 +1,1 @@
-# algorithms
+# Implements some common algorithms
