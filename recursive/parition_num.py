@@ -20,6 +20,6 @@ if __name__ == "__main__":
     s = 0
     for p in partition_num(n, k, prefix):
         print(f"Partition is {p}")
-        s += sum(p)
+        s += 1
 
-    print(f"Sum is {s}")
+    print(f"Sum is {s*n}")
