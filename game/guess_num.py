@@ -1,13 +1,7 @@
 import numpy as np
 
 
-MAX_INT = pow(2, 63)
-
-
 def guess_num(n):
-    if n == 1:
-        return 0
-
     m = np.zeros((n+1, n+1), dtype=np.int)
 
     for j in range(2, n+1):
@@ -22,5 +16,5 @@ def guess_num(n):
 
 
 if __name__ == "__main__":
-    n = 4
+    n = 5
     print(f"max cost is {guess_num(n)}")
