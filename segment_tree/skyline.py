@@ -37,7 +37,6 @@ def skyline(buildings):
         else:
             active_builds.remove(b_id)
 
-        print(f"heap: {heap}, active builds: {active_builds}")
         while True:
             max_height, b_id = heap[0]
             if b_id not in active_builds:
@@ -45,6 +44,7 @@ def skyline(buildings):
             else:
                 break
 
+        print(f"heap: {heap}, active builds: {active_builds}")
         max_height = -max_height
         if max_height != prev_height:
             r.append((x, max_height))
