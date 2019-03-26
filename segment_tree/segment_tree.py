@@ -16,15 +16,13 @@ def build_min_tree(a, buf, low, high, pos, level=0):
 
 
 def query_min_tree(buf, low, high, q_l, q_h, pos, max_v=sys.maxsize):
-    if q_l <= low and high <= q_h:
-        return buf[pos]
     if q_l > high:
         return max_v
     if q_h < low:
         return max_v
 
-    # low < q_l <= high
-    # low <= q_h < high
+    if q_l <= low and high <= q_h:
+        return buf[pos]
 
     mid = (low + high) // 2
     l_min = query_min_tree(buf, low, mid, q_l, q_h, 2*pos+1, max_v)
