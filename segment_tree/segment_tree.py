@@ -41,7 +41,6 @@ def update_min_tree(buf, low, high, k, v, pos):
     update_min_tree(buf, mid+1, high, k, v, 2*pos+2)
 
 
-
 if __name__ == "__main__":
     arr = list(range(1, 7))
     sz = len(arr)
