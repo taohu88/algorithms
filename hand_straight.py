@@ -22,32 +22,30 @@ def hand_straight(a, m):
 
 def continuous_hands(hands):
     sz = len(hands)
-    i = -1
-    while True:
-        i += 1
-        if i >= sz:
-            break
-
+    i = 0
+    while i < sz:
         if hands[i][1] <= 0:
+            i += 1
             continue
 
         prev = hands[i][0]
         hands[i][1] -= 1
-        j = 0
-        k = 0
-        while True:
-            k += 1
-            if j >= m:
-                break
-            if i + k >=sz:
+        j = i + 1
+        k = 1
+        while k < m and j < sz:
+            if hands[j][1] <= 0:
                 return False
-            if hands[i+k][1] > 0:
-                cur = hands[i+k][0]
-                if cur != prev + 1:
-                    return False
-                prev = cur
-                hands[i+k][1] -= 1
-                j += 1
+
+            cur = hands[j][0]
+            if cur != prev + 1:
+                return False
+            prev = cur
+            hands[j][1] -= 1
+            k += 1
+            j += 1
+
+        if k < m:
+            return False
 
     return True
 
