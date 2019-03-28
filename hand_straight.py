@@ -28,7 +28,7 @@ def continuous_hands(hands):
             i += 1
             continue
 
-        prev = hands[i][0]
+        start = hands[i][0]
         hands[i][1] -= 1
         j = i + 1
         k = 1
@@ -37,9 +37,8 @@ def continuous_hands(hands):
                 return False
 
             cur = hands[j][0]
-            if cur != prev + 1:
+            if cur != start + k:
                 return False
-            prev = cur
             hands[j][1] -= 1
             k += 1
             j += 1
@@ -51,7 +50,7 @@ def continuous_hands(hands):
 
 
 if __name__ == "__main__":
-    a = [1, 2, 4, 6, 2, 3, 4, 7, 8]
+    a = [1, 2, 3, 6, 2, 3, 4, 7, 8]
     m = 3
     r = hand_straight(a, m)
     print(r)
