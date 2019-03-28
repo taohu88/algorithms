@@ -15,7 +15,7 @@ def topology_sort(graph):
 
 def _sort_helper(graph, node, visited, r, level=0):
     if visited[node] == 1:
-        print(f"{level*4*' '} visited {node} return true")
+        print(f"{level*4*' '} already visited {node} return true")
         return True
     if visited[node] == -1:
         print(f"{level*4*' '} visited ancestor {node} return false")
