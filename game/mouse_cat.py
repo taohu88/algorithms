@@ -1,4 +1,4 @@
-from graph.graph import Graph
+from graph.graph_list import Graph
 from collections import defaultdict
 
 
