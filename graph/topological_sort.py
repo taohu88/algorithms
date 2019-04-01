@@ -1,4 +1,4 @@
-from graph.graph_list import Graph
+from graph.adj_list import Graph
 
 
 def topology_sort(graph):

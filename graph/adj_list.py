@@ -16,6 +16,9 @@ class Graph:
             if not self.directed:
                 self.edges[c].append(p)
 
+    def add_node(self, n):
+        self.nodes.add(n)
+
     def children(self, p):
         return self.edges[p]
 
