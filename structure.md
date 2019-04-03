@@ -5,3 +5,4 @@
 # Hash
 * [City Hash](https://web.stanford.edu/class/ee380/Abstracts/121017-slides.pdf)
 * [Comparison](https://softwareengineering.stackexchange.com/questions/49550/which-hashing-algorithm-is-best-for-uniqueness-and-speed)
+* [Hash functions](https://en.wikipedia.org/wiki/List_of_hash_functions)
